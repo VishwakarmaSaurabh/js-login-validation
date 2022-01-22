@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(228, 228, 228);
+    user-select: none;
+}
+
+header {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #000000; */
+    color: #FFC600;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+}
+
+header > h1 {
+    letter-spacing: 7px;
+    font-size: 2.5em;
+}
+
+header > p {
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main {
+    /* background-color: green; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 450px;
+    height: 500px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+
+small {
+    visibility: hidden;
+    color: red;
+}
+
+button {
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: lightgreen;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+}
