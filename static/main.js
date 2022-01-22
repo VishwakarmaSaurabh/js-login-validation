@@ -28,7 +28,7 @@ form.addEventListener('submit', (e) => {
             errorBlock.forEach(element => element.style.visibility = "hidden");
         }, 5000);
     } else {
-        window.location.replace("http://localhost:5500/homepage.html");
+        window.location.replace("https://js-login-validation.netlify.app/homepage.html");
     }
 })
 
