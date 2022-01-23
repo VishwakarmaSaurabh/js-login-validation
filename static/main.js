@@ -6,12 +6,10 @@ const errorPassword = document.querySelector(".error_password");
 const errorBlock = document.querySelectorAll("#error");
 const register = document.querySelector("#register");
 
-
 const user = sessionStorage.key(0);
 if (user !== null) {
   const userFromStorage = JSON.parse(localStorage.getItem(user));
   if (userFromStorage !== null && user === userFromStorage.username) {
-    console.log('Entered')
     location.href = "./homepage.html";
   }
 }
@@ -43,19 +41,20 @@ form.addEventListener("submit", (e) => {
     const user = JSON.parse(localStorage.getItem(username));
 
     if (user !== null) {
-      if (user.username === username && user.password === password) {
-        console.log("Logged in !!!");
+      const check = user.username === username && user.password === password;
+      console.log(check);
+      if (check) {
         sessionStorage.setItem(username, username);
 
         location.href = "./homepage.html";
-      }
-    } else {
-      errorBlock[0].innerHTML = "Username or Password is incorrect.";
-      errorBlock[0].style.visibility = "visible";
+      } else {
+        errorBlock[0].innerHTML = "Username or Password is incorrect.";
+        errorBlock[0].style.visibility = "visible";
 
-      setTimeout(() => {
-        errorBlock[0].style.visibility = "hidden";
-      }, 5000);
+        setTimeout(() => {
+          errorBlock[0].style.visibility = "hidden";
+        }, 5000);
+      }
     }
   }
 });
