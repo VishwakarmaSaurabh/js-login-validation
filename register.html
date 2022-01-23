@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./static/register_styles.css"
+      type="text/css"
+    />
+    <script src="./static/register.js" type="module"></script>
+    <title>Register</title>
+  </head>
+
+  <body>
+    <main id="register_main">
+      <h1>Register your account</h1>
+      <form id="register_form">
+        <div class="form_fields">
+          <label for="fullname">Full name</label><br />
+          <input type="text" name="fullname" id="fullname" />
+          <small class="error">error</small>
+        </div>
+        <div class="form_fields">
+          <label for="email">Email address</label><br />
+          <input type="text" name="email" id="email" />
+          <small class="error">error</small>
+        </div>
+        <div class="form_fields">
+          <label for="username">Username</label><br />
+          <input type="text" name="username" id="username" />
+          <small class="error">error</small>
+        </div>
+        <div class="form_fields">
+          <label for="password">Password</label><br />
+          <input type="password" name="password " id="password" />
+          <small class="error">error</small>
+        </div>
+        <div class="form_fields">
+          <label for="password_confirm">Confirm Password</label><br />
+          <input
+            type="password"
+            name="password_confirm"
+            id="password_confirm"
+          />
+          <small class="error">error</small>
+        </div>
+        <button type="submit">Sign Up</button>
+        <p>Already have and account? <a href="./index.html">Sign In</a>.</p>
+      </form>
+    </main>
+  </body>
+</html>
