@@ -7,7 +7,7 @@ const errorBlock = document.querySelectorAll("#error");
 const register = document.querySelector("#register");
 
 
-const user = sessionStorage.key(1);
+const user = sessionStorage.key(0);
 if (user !== null) {
   const userFromStorage = JSON.parse(localStorage.getItem(user));
   if (userFromStorage !== null && user === userFromStorage.username) {
