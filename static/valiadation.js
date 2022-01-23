@@ -29,7 +29,11 @@ export const validate = (username, password) => {
   } else if (password.length > 25) {
     errors["password"] = "Your password must be less than 25 characters.";
   } else if (password.search(/[a-z]/i) < 0) {
-    errors["password"] = "Your password must contain at least one letter.";
+    errors["password"] =
+      "Your password must contain at least one lowercase letter.";
+  } else if (password.search(/[A-Z]/i) < 0) {
+    errors["password"] =
+      "Your password must contain at least one uppercase letter.";
   } else if (password.search(/[0-9]/) < 0) {
     errors["password"] = "Your password must contain at least one digit.";
   }
@@ -80,6 +84,9 @@ export const validateRegister = (
     errors["password"] = "Your password must be less than 25 characters.";
   } else if (password.search(/[a-z]/i) < 0) {
     errors["password"] = "Your password must contain at least one letter.";
+  } else if (password.search(/[A-Z]/i) < 0) {
+    errors["password"] =
+      "Your password must contain at least one uppercase letter.";
   } else if (password.search(/[0-9]/) < 0) {
     errors["password"] = "Your password must contain at least one digit.";
   }
