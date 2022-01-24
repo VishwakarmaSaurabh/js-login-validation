@@ -1,7 +1,7 @@
 const logoutButton = document.querySelector("#logout");
 
 const user = sessionStorage.key(0);
-if (user !== JSON.parse(localStorage.getItem(user))) {
+if (user === JSON.parse(localStorage.getItem(user))) {
   location.href = "./index.html";
 }
 
