@@ -55,6 +55,13 @@ form.addEventListener("submit", (e) => {
           errorBlock[0].style.visibility = "hidden";
         }, 5000);
       }
+    } else {
+      errorBlock[0].innerHTML = "User is not registered.";
+        errorBlock[0].style.visibility = "visible";
+
+        setTimeout(() => {
+          errorBlock[0].style.visibility = "hidden";
+        }, 5000);
     }
   }
 });
